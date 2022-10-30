@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/biru"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.UserDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_toolbar_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_delete"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginEnd="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_toolbar_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/delete" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_putih"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_back">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginTop="@dimen/_38sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/foto_profile"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginStart="@dimen/_52sdp"
+                        android:layout_marginTop="@dimen/_38sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_user"/>
+
+                    <EditText
+                        android:id="@+id/nama_user"
+                        android:layout_width="@dimen/_246sdp"
+                        android:layout_height="@dimen/_46sdp"
+                        android:layout_marginTop="@dimen/_minus3sdp"
+                        style="@style/TeksForm"
+                        android:inputType="text"
+                        android:hint="@string/name"
+                        android:maxLines="1"
+                        android:focusable="false"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nama" />
+
+                    <TextView
+                        android:id="@+id/nis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nis"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginStart="@dimen/_52sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nama_user"/>
+
+                    <EditText
+                        android:id="@+id/nis_user"
+                        android:layout_width="@dimen/_246sdp"
+                        android:layout_height="@dimen/_46sdp"
+                        android:layout_marginTop="@dimen/_minus3sdp"
+                        style="@style/TeksForm"
+                        android:inputType="text"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:hint="@string/nis"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nis" />
+
+                    <Button
+                        android:id="@+id/btn_edt"
+                        android:layout_width="@dimen/_246sdp"
+                        android:layout_height="@dimen/_46sdp"
+                        style="@style/Tombol"
+                        android:text="@string/edit"
+                        app:layout_constraintVertical_bias="1"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nis_user" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

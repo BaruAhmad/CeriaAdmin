@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:background="@drawable/bg_putih">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/handle_bottomsheet"
+        android:layout_marginTop="@dimen/_8sdp" />
+
+    <ImageView
+        android:id="@+id/banner_icon"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_92sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/disconnect" />
+
+    <TextView
+        android:id="@+id/banner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_disconnect"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp" />
+
+    <TextView
+        android:id="@+id/banner_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_disconnect"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/abu"
+        android:textSize="@dimen/_9ssp"
+        android:layout_marginStart="@dimen/_27sdp"
+        android:layout_marginEnd="@dimen/_27sdp" />
+
+    <Button
+        android:id="@+id/banner_action"
+        android:layout_width="@dimen/_246sdp"
+        android:layout_height="@dimen/_46sdp"
+        style="@style/Tombol"
+        android:text="@string/try_again"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
+
+</LinearLayout>

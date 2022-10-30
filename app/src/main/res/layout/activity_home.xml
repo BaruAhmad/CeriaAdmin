@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/biru"
+    android:fitsSystemWindows="true"
+    app:layoutDescription="@xml/activity_home_scene"
+    tools:context=".activity.HomeActivity">
+
+    <ImageView
+        android:id="@+id/foto_user"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/foto_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/versi_about"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foto_user" />
+
+    <TextView
+        android:id="@+id/nama_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_greeting" />
+
+    <LinearLayout
+        android:id="@+id/btn_setting"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_19sdp"
+        android:background="@drawable/bg_toolbar_btn"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_cerita"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_putih"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/navigation_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nama_user">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginStart="@dimen/_23sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_23sdp"
+            android:background="@drawable/bg_cari">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/cari_cerita"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:closeIcon="@drawable/silang"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null"
+                app:queryHint="@string/book_search"
+                app:searchIcon="@drawable/search"
+                app:theme="@style/SearchView" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fillViewport="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cerita"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_book" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#337090B0"
+        app:layout_constraintBottom_toTopOf="@id/navigation_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/navigation_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:id="@+id/nav_beranda"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/beranda" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/semibold"
+                android:text="@string/beranda"
+                android:textColor="@color/biru"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/nav_extra"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/widget" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="@string/ekstra"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        style="@style/FABStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_41sdp"
+        android:contentDescription="@null"
+        app:fabCustomSize="@dimen/_46sdp"
+        app:layout_constraintBottom_toBottomOf="@id/navigation_bottom"
+        app:layout_constraintLeft_toLeftOf="@id/navigation_bottom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/navigation_bottom"
+        app:srcCompat="@drawable/add" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

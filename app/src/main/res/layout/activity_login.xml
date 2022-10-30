@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bg_login"
+                android:layout_width="@dimen/_281sdp"
+                android:layout_height="@dimen/_285sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/bg_biru"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_211sdp"
+                android:layout_height="@dimen/_211sdp"
+                android:src="@drawable/login"
+                app:layout_constraintBottom_toBottomOf="@id/bg_login"
+                app:layout_constraintLeft_toLeftOf="@+id/bg_login"
+                app:layout_constraintRight_toRightOf="@id/bg_login"
+                app:layout_constraintTop_toTopOf="@id/bg_login" />
+
+            <TextView
+                android:id="@+id/text_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_36sdp"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:fontFamily="@font/bold"
+                android:text="@string/welcome"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_19ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bg_login" />
+
+            <TextView
+                android:id="@+id/desc_welcome"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_36sdp"
+                android:fontFamily="@font/medium"
+                android:text="@string/desc_welcome"
+                android:textColor="@color/abu2"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_welcome" />
+
+            <EditText
+                android:id="@+id/username"
+                style="@style/TeksForm"
+                android:layout_width="@dimen/_246sdp"
+                android:layout_height="@dimen/_46sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:maxLength="15"
+                android:maxLines="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/desc_welcome" />
+
+            <TextView
+                android:id="@+id/username_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/merah"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="gone"
+                android:text="@string/username_error"
+                android:layout_marginStart="@dimen/_36sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/username" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/box_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleDrawable="@drawable/eye_password"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/username_error">
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/TeksForm"
+                    android:layout_width="@dimen/_246sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/password_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/merah"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="gone"
+                android:text="@string/pw_error"
+                android:layout_marginStart="@dimen/_36sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/box_password" />
+
+            <ProgressBar
+                android:id="@+id/loading_bar"
+                android:layout_width="@dimen/_27sdp"
+                android:layout_height="@dimen/_27sdp"
+                android:indeterminateTint="@color/white"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_masuk"
+                app:layout_constraintLeft_toLeftOf="@id/btn_masuk"
+                app:layout_constraintRight_toRightOf="@id/btn_masuk"
+                app:layout_constraintTop_toTopOf="@id/btn_masuk" />
+
+            <Button
+                android:id="@+id/btn_masuk"
+                android:layout_width="@dimen/_246sdp"
+                android:layout_height="@dimen/_46sdp"
+                style="@style/Tombol"
+                android:text="@string/login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_error"
+                app:layout_constraintVertical_bias="1"
+                android:layout_marginBottom="@dimen/_8sdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

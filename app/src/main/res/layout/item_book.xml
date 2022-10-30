@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_115sdp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="@dimen/_23sdp"
+    android:layout_marginEnd="@dimen/_23sdp"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:layout_marginTop="@dimen/_6sdp"
+    app:cardElevation="3dp">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/cover_cerita"
+            android:layout_width="@dimen/_69sdp"
+            android:layout_height="@dimen/_92sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:src="@drawable/book_cover"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/judul_cerita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Cerita"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/hitam"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_27sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cover_cerita" />
+
+        <TextView
+            android:id="@+id/asal_cerita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asal Cerita"
+            android:textColor="@color/text_form"
+            android:fontFamily="@font/medium"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginStart="@dimen/_19sdp"
+            app:layout_constraintLeft_toRightOf="@id/cover_cerita"
+            app:layout_constraintTop_toBottomOf="@id/judul_cerita" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

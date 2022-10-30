@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_293sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:backgroundTint="@color/white"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginBottom="@dimen/_19sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exit_dialog_text"
+            android:fontFamily="@font/semibold"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_23sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginEnd="@dimen/_19sdp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/batal"
+                android:layout_width="@dimen/_123sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/bg_btn_outline"
+                android:textColor="@color/biru"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/semibold"
+                android:text="@string/cancel"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/yes_action"
+                android:layout_width="@dimen/_123sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/bg_btn"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/semibold"
+                android:text="@string/iya_keluar"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
